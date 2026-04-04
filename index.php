@@ -30,7 +30,7 @@
 <body class="bg-light">
   <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">Anime hotel</a>
+      <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">EoS Hotel</a>
       <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -482,8 +482,6 @@
       </div>
       <div class="col-lg-12 text-center mt-5">
         <a href="#" class="btn btn-sm btn-outline-dark rounded-0 shadow-none">More Facilities >>></a>
-
-
       </div>
 
     </div>
@@ -491,15 +489,14 @@
 
   <!-- Our Testimonials -->
   <h2 class="mt-5 pt-5 mb-4 text-center fw-bold h-font">OUR TESTIMONIALS</h2>
-  <div class="container">
-
+  <div class="container mt-5">
     <div class="swiper swiper-testimonials">
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper mb-5">
 
         <div class="swiper-slide bg-white p-4">
           <div class="profile p-4">
 
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center mb-3">
               <img src="#" width="30px">
               <h6 class="m-0 ms-2">Random User1</h6>
             </div>
@@ -518,8 +515,6 @@
 
           </div>
         </div>
-
-
         <div class="swiper-slide bg-white p-4">
           <div class="profile p-4">
 
@@ -567,12 +562,85 @@
 
       </div>
       <div class="swiper-pagination"></div>
+    </div>
+    <div class="col-lg-12 text-center mt-5">
+        <a href="#" class="btn btn-sm btn-outline-dark rounded-0 shadow-none"> Know More >>></a>
+      </div>
+  </div>
 
+  <!-- Reach Us -->
+  <h2 class="mt-5 pt-5 mb-4 text-center fw-bold h-font">REACH US</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
+        <iframe class="w-100 rounded" height="320px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.5927675167786!2d85.291006!3d27.700597499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18609488cdb7%3A0x44edd8fc9a17af63!2sThe%20Soaltee%20Kathmandu%2C%20Autograph%20Collection!5e1!3m2!1sen!2snp!4v1775287943344!5m2!1sen!2snp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="bg-white p-4 mb-4 rounded">
+          <h5>Call Us</h5>
+          <a href="tel: +9779816235740" class="d-inline-block text-decoration-none mb-2 text-dark"><i class="bi bi-telephone-fill"></i> +9779816235740</a>
+          <br>
+          <a href="tel: +014273999" class="d-inline-block text-decoration-none mb-2 text-dark"><i class="bi bi-telephone-fill"></i> +014273999</a>
+
+        </div>
+
+        <div class="bg-white p-4 mb-4 rounded">
+          <h5>Follow Us</h5>
+          <a href="#" class="d-inline-block mb-3">
+            <span class="badge bg-light text-dark fs-6 p-2">
+              <i class="bi bi-instagram me-1"></i> Instagram
+            </span>
+          </a>
+          <br>
+          <a href="#" class="d-inline-block mb-3">
+            <span class="badge bg-light text-dark fs-6 p-2">
+              <i class="bi bi-facebook"></i> Facebook
+            </span>
+          </a>
+          <br>
+          <a href="#" class="d-inline-block">
+            <span class="badge bg-light text-dark fs-6 p-2">
+              <i class="bi bi-twitter"></i> Twitter
+            </span>
+          </a>
+
+
+
+        </div>
+      </div>
     </div>
   </div>
-  <br><br><br>
-  <br><br><br>
 
+  <div class="container-fluid bg-white mt-5">
+    <div class="row">
+      <div class="col-lg-4">
+
+        <h3 class="h-font fw-bold fs-3 mb-2">EoS Hotel</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+      <div class="col-lg-4 p-4">
+        <h5 class="mb-3">Links</h5>
+        <a href="#" class="d-inline-block mb-2 text-decoration-none text-dark">Home</a><br>
+        <a href="#" class="d-inline-block mb-2 text-decoration-none text-dark">Rooms</a><br>
+        <a href="#" class="d-inline-block mb-2 text-decoration-none text-dark">Facilities</a><br>
+        <a href="#" class="d-inline-block mb-2 text-decoration-none text-dark">About Us</a><br>
+        <a href="#" class="d-inline-block mb-2 text-decoration-none text-dark">Contact Us</a><br>
+      </div>
+
+      <div class="col-lg-4 p-4">
+        <h5 class="mb-3">Follow Us</h5>
+        <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none"><i class="bi bi-instagram me-1"></i> Instagram
+        </a><br>
+        <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none"><i class="bi bi-facebook me-1"></i> Facebook
+        </a><br>
+        <a href="#" class="d-inline-block text-dark text-decoration-none"><i class="bi bi-twitter me-1"></i> Twitter
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <h6 class="text-center bg-dark text-white p-3 m-0">Designed and Developed By EoS WebDev</h6>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
@@ -588,14 +656,36 @@
     });
 
     var swiper = new Swiper(".swiper-testimonials", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      slidesPerView: "3",
       loop: true,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
       pagination: {
         el: ".swiper-pagination",
-        clickable: true,
       },
-      autoplay: {
-        delay: 3000,
-      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      }
     });
   </script>
 </body>
