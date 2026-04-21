@@ -31,17 +31,17 @@
           <h5>Address</h5>
           <a href="https://maps.app.goo.gl/3hS31HUFRtsAm6Uc9" target="_blank" class="d-inline-block text-decoration-none text-dark mb-2"><i class="bi bi-geo-alt-fill"></i>P72R+6CR, Tahachal Marg, Kathmandu 44600</a>
 
-          <h5 mt-4>Call Us</h5>
+          <h5 class="mt-4">Call Us</h5>
           <a href="tel: +9779816235740" class="d-inline-block text-decoration-none mb-2 text-dark"><i class="bi bi-telephone-fill"></i> +9779816235740</a>
           <br>
           <a href="tel: +014273999" class="d-inline-block text-decoration-none mb-2 text-dark"><i class="bi bi-telephone-fill"></i> +014273999</a>
 
-          <h5 class="mt4">Email</h5>
+          <h5 class="mt-4">Email</h5>
           <a href="mailto: ask.eoswebdev@gmail.com" class="d-inline-block text-decoration-none mb-2 text-dark">
             <i class="bi bi-envelope-fill"></i> ask.eoswebdev@gmail.com
           </a>
 
-          <h5 mt-4>Follow Us</h5>
+          <h5 class="mt-4">Follow Us</h5>
           <a href="#" class="d-inline-block text-dark fs-5 me-2">
             <i class="bi bi-instagram me-1"></i>
           </a>
