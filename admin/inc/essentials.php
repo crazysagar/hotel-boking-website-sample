@@ -3,9 +3,10 @@
 function adminLogin(){
     session_start();
     if(!(isset($_SESSION['adminLogin']) && $_SESSION['adminLogin']==true)){
-        header("location: index.php");
+header("location: index.php");
+    exit;
     }
-    session_regenerate_id(true);
+    // session_regenerate_id(true);
 
 }
 function redirect($url) {
@@ -13,6 +14,7 @@ function redirect($url) {
     <script>window.location.href='$url';
     </script>
     ";
+    exit;
 }
 
 
