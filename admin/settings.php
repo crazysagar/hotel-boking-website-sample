@@ -32,7 +32,7 @@ adminLogin();
                         <div class="d-flex align-items-center justify-content-between">
                             <h5 class="card-title m-0">General Settings</h5>
 
-                            <button type="button" class="btn btn-dark btn-sm me-3" 
+                            <button type="button" class="btn btn-dark btn-sm me-3"
                                 data-bs-toggle="modal" data-bs-target="#general_s">
                                 <i class="bi bi-pencil-square"></i> Edit
                             </button>
@@ -63,12 +63,12 @@ adminLogin();
 
                                     <div class="mb-3">
                                         <label class="form-label">Site Title</label>
-                                        <input type="text" id="site_title_inp" class="form-control">
+                                        <input type="text" name="site_title" id="site_title_inp" class="form-control">
                                     </div>
 
                                     <div class="mb-3">
                                         <label class="form-label">About Us</label>
-                                        <textarea id="site_about_inp" class="form-control" rows="6"></textarea>
+                                        <textarea name="site_about" id="site_about_inp" class="form-control" rows="6"></textarea>
                                     </div>
 
                                 </div>
@@ -179,7 +179,6 @@ adminLogin();
                             </div>
 
                         </div>
-
                     </div>
                 </div>
 
@@ -266,13 +265,13 @@ adminLogin();
                                         SUBMIT
                                     </button>
                                 </div>
+                            </div>
                         </form>
                     </div>
                 </div>
 
                 <!--Management Team section  -->
-
-                <div class="card border-0 shadow-sm mb-4">
+                <div class="card border-0 shadow-sm m-4">
                     <div class="card-body">
 
                         <div class="d-flex align-items-center justify-content-between">
@@ -280,10 +279,55 @@ adminLogin();
 
                             <button type="button" class="btn btn-dark btn-sm me-3"
                                 data-bs-toggle="modal" data-bs-target="#team_s">
-                                <i class="bi bi-person-fill-add"></i> Add
+                                <i class="bi bi-plus-square"></i> Add
                             </button>
                         </div>
 
+                        <div class="row" id="team-data">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Management Team modal -->
+
+                <div class="modal fade" id="team_s" tabindex="-1">
+                    <div class="modal-dialog">
+
+                        <form id="team_s_form">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Add Team Member</h5>
+                                </div>
+
+                                <div class="modal-body">
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Name</label>
+                                        <input type="text" name="member_name" id="member_name_inp" class="form-control">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Picture</label>
+                                        <input type="file" name="member_pic" id="member_pic_inp" accept=".jpg, .png, .webp, .jpeg" class="form-control">
+
+                                    </div>
+
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" onclick="" class="btn text-secondary" data-bs-dismiss="modal">
+                                        CANCEL
+                                    </button>
+
+                                    <button type="submit" class="btn custom-bg text-white">
+                                        SUBMIT
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
 
                     </div>
                 </div>
@@ -305,6 +349,9 @@ adminLogin();
         let shutdown_toggle = document.getElementById('shutdown_toggle');
         let general_s_form = document.getElementById('general_s_form');
         let contacts_s_form = document.getElementById('contacts_s_form');
+        let team_s_form = document.getElementById('team_s_form');
+        let member_name_inp = document.getElementById('member_name_inp');
+        let member_pic_inp = document.getElementById('member_pic_inp');
 
         // get data
         function get_general() {
@@ -396,7 +443,7 @@ adminLogin();
 
             xhr.onload = function() {
 
-                contacts_data = JSON.parse(this.responseText); // FIXED (removed Object.values)
+                contacts_data = JSON.parse(this.responseText);
 
                 for (let i = 0; i < contacts_p_id.length; i++) {
                     document.getElementById(contacts_p_id[i]).innerText = contacts_data[contacts_p_id[i]];
@@ -453,6 +500,58 @@ adminLogin();
                 }
             }
             xhr.send(data_str);
+
+        }
+
+
+        team_s_form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            add_member();
+        });
+
+        function add_member() {
+            
+            if (!member_name_inp.value || !member_pic_inp.files.length) {
+                console.log("Fill all fields");
+                return;
+            }
+
+            let data = new FormData();
+            data.append('name', member_name_inp.value);
+            data.append('picture', member_pic_inp.files[0]);
+            data.append('add_member', '');
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "ajax/settings_crud.php", true);
+
+            xhr.onload = function() {
+
+                console.log(this.responseText);
+
+                let modalEl = document.getElementById('team_s');
+                let modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                modal.hide();
+
+                 if (this.responseText == 'inv_img') {
+                    alert('error','Only JPG, PNG, WEBP and JPEG are allowed!');
+
+                } else if (this.responseText == 'inv_size') {
+                    alert('error','Image should be less than 2MB');
+
+                } else if (this.responseText == 'upd_failed') {
+                    alert('error','Image upload failed. Server Down!');
+
+                } else {
+                    alert('success', 'New Member Added!');
+                    member_name_inp.value = '';
+                    member_pic_inp.value = '';
+                }
+
+                
+            }
+
+
+            xhr.send(data);
         }
 
         // load
