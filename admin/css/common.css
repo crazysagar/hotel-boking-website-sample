@@ -9,7 +9,6 @@
 
 .h-font {
     font-family: 'Merienda', cursive;
-
 }
 
 input::-webkit-outer-spin-button,
@@ -25,7 +24,7 @@ input::-webkit-inner-spin-button {
 
 .custom-bg:hover {
     background-color: var(--teal-hover);
-    border-color : var(--teal-hover);
+    border-color: var(--teal-hover);
 }
 
 .swiper {
@@ -40,7 +39,8 @@ input::-webkit-inner-spin-button {
 .swiper-wrapper {
     height: auto;
 }
-.h-line{
+
+.h-line {
     width: 150px;
     margin: 0 auto;
     height: 1.7px;
@@ -48,44 +48,31 @@ input::-webkit-inner-spin-button {
 
 .custom-alert {
     position: fixed;
-    top: 20px; 
+    top: 20px;
     right: 20px;
-    
-    transform: none; 
-    
-    background-color: #fff3cd; 
-    color: #856404;            
+    background-color: #fff3cd;
+    color: #856404;
     padding: 15px 40px 15px 20px;
     border-radius: 4px;
-    font-family: sans-serif;
     font-size: 14px;
     font-weight: bold;
-    
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    
     z-index: 1000;
 }
 
-.custom-alert .close-btn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    opacity: 0.5;
-}
-
-#dashboard-menu{
+#dashboard-menu {
     position: fixed;
     height: 100%;
     z-index: 11;
 }
-@media screen and(max-width: 992px) {
-    #dashboard-menu{
+
+@media screen and (max-width: 992px) {
+    #dashboard-menu {
         height: auto;
         width: 100%;
     }
 }
+
 #main-content {
     margin-top: 60px;
 }
